@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Historia documental de Jose Mayorga Manas (1887-1970), director general de Kleinwort, Sons &amp; Co. en la City de Londres, agente de Juan March, y la persona que el 9 de julio de 1936 entrego las 2.000 libras que pagaron el avion que llevo a Franco de Canarias a Marruecos.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="The Mayorga Ledger">
+<meta property="og:description" content="Como el hijo de un tabernero de Almeria llego a director general de una banca mercantil de la City de Londres - y pago el avion que llevo a Franco a Marruecos.">
+<meta property="og:type" content="article">
+<style>
+/* the small reset the artifact host injects around a published fragment */
+html{color-scheme:light dark}
+:root{padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+</style>
 <title>The Mayorga Ledger</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +43,9 @@
   --shadow:0 1px 2px rgba(0,0,0,.4);
 }
 *{box-sizing:border-box}
+/* Base reset. The artifact host injects these; a standalone copy must carry its own. */
+img{max-width:100%; height:auto}
+[hidden]{display:none !important}
 body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:var(--body); font-size:16px; line-height:1.62;
@@ -236,12 +255,19 @@ footer{padding-block:40px 56px; font-family:var(--mono); font-size:11.5px; color
 
 /* ---------- facsimiles ---------- */
 .fax{display:grid; gap:30px; margin-top:28px}
-@media (min-width:880px){.fax{grid-template-columns:1fr 1fr}}
+.fax figure{min-width:0}
+@media (min-width:880px){.fax{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .fax figure{margin:0; background:var(--surface); border:1px solid var(--rule); padding:16px}
-.fax img{display:block; width:100%; height:auto}
-:root[data-theme="dark"] .fax img{filter:invert(1) hue-rotate(180deg) contrast(.9) brightness(1.05)}
+/* Facsimiles are photographs of real documents: never invert or hue-shift them.
+   One of them is a portrait, and inverting a face produces a negative. In dark
+   mode they sit on a pale mount and are dimmed very slightly, so the page reads
+   as paper on a dark desk rather than a glaring white block. */
+.fax img{display:block; width:100%; height:auto; background:#fff}
+:root[data-theme="dark"] .fax figure{background:#1b2321; border-color:#2b3634}
+:root[data-theme="dark"] .fax img{filter:brightness(.9)}
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .fax img{filter:invert(1) hue-rotate(180deg) contrast(.9) brightness(1.05)}
+  :root:not([data-theme="light"]) .fax figure{background:#1b2321; border-color:#2b3634}
+  :root:not([data-theme="light"]) .fax img{filter:brightness(.9)}
 }
 .fax figcaption{margin-top:12px; border-top:1px solid var(--rule); padding-top:10px}
 .fax .wide{grid-column:1/-1}
@@ -302,7 +328,8 @@ footer{padding-block:40px 56px; font-family:var(--mono); font-size:11.5px; color
   .strip{display:none}
 }
 </style>
-
+</head>
+<body>
 <div class="langbar">
   <div class="langbar-inner">
     <span class="brand">Mayorga · 1887–1970</span>
@@ -1402,3 +1429,6 @@ footer{padding-block:40px 56px; font-family:var(--mono); font-size:11.5px; color
   setLang(initial, false);
 })();
 </script>
+
+</body>
+</html>
