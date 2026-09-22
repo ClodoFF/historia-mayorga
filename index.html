@@ -329,12 +329,69 @@ footer{padding-block:40px 56px; font-family:var(--mono); font-size:11.5px; color
   .flowstack{display:block}
   .strip{display:none}
 }
+/* ---------- table of contents ---------- */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+section,.toc{scroll-margin-top:60px}
+
+.toc{padding-block:34px 40px; border-bottom:1px solid var(--rule)}
+.toc-head{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:20px}
+.toc-head h2{font-size:clamp(19px,2.6vw,23px)}
+.toc-head .note{font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:.06em}
+
+.toc-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(228px,1fr)); gap:10px}
+
+.toc-card{
+  position:relative; display:flex; flex-direction:column; gap:5px;
+  padding:15px 54px 13px 15px; min-height:130px;
+  background:var(--surface); color:inherit; text-decoration:none;
+  border:1px solid var(--rule); border-radius:3px;
+  transition:border-color .15s ease, background .15s ease, transform .15s ease;
+}
+.toc-card:hover,.toc-card:focus-visible{
+  border-color:var(--accent); background:var(--surface2); transform:translateY(-2px);
+}
+@media (prefers-reduced-motion:reduce){
+  .toc-card{transition:none}
+  .toc-card:hover,.toc-card:focus-visible{transform:none}
+}
+
+.toc-n{font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.14em; color:var(--accent)}
+.toc-g{
+  position:absolute; top:12px; right:13px; line-height:0;
+  color:var(--muted); opacity:.55; transition:color .15s ease, opacity .15s ease;
+}
+.toc-card:hover .toc-g,.toc-card:focus-visible .toc-g{color:var(--accent); opacity:1}
+.toc-t{font-family:var(--display); font-weight:700; font-size:16.5px; line-height:1.2; text-wrap:balance}
+.toc-d{font-size:13.5px; line-height:1.45; color:var(--muted); text-wrap:pretty}
+.toc-m{
+  margin-top:auto; padding-top:9px;
+  font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+}
+
+/* the masthead brand doubles as the way back to the contents */
+a.brand{text-decoration:none; display:inline-flex; align-items:center; gap:7px}
+a.brand:hover,a.brand:focus-visible{color:var(--ink)}
+a.brand .bars{
+  display:inline-block; width:11px; height:9px; flex:none; position:relative;
+  border-top:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
+}
+a.brand .bars::after{
+  content:""; position:absolute; left:0; right:0; top:50%; margin-top:-.75px;
+  border-top:1.5px solid currentColor;
+}
+
+@media (max-width:520px){
+  .toc-card{min-height:0; padding:13px 48px 12px 13px}
+  .toc-t{font-size:15.5px}
+  .toc-d{font-size:13px}
+}
 </style>
 </head>
 <body>
 <div class="langbar">
   <div class="langbar-inner">
-    <span class="brand">Mayorga · 1887–1970</span>
+    <a class="brand" href="#toc"><span class="bars" aria-hidden="true"></span><span class="en">Mayorga · Contents</span><span class="es">Mayorga · Índice</span></a>
     <div class="switch" role="group" aria-label="Language / Idioma">
       <button type="button" id="lang-en" data-set="en" aria-pressed="true">English</button>
       <button type="button" id="lang-es" data-set="es" aria-pressed="false">Español</button>
@@ -370,12 +427,98 @@ footer{padding-block:40px 56px; font-family:var(--mono); font-size:11.5px; color
   </div>
 </header>
 
+<nav class="toc" id="toc" aria-labelledby="toc-h">
+  <div class="toc-head">
+    <h2 id="toc-h"><span class="en">Contents</span><span class="es">Índice</span></h2>
+    <span class="note"><span class="en">eleven sections — click to jump</span><span class="es">once secciones — pulse para saltar</span></span>
+  </div>
+  <div class="toc-grid">
+    <a class="toc-card" href="#ledger">
+      <span class="toc-n">01</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h24"/><path d="M8 24v-6M14 24v-13M20 24v-8M26 24v-16"/><circle cx="26" cy="8" r="2.4" fill="currentColor" stroke="none"/></svg></span>
+      <span class="toc-t"><span class="en">The ledger</span><span class="es">Cronología</span></span>
+      <span class="toc-d"><span class="en">Thirty-two dated events, each one with its evidence.</span><span class="es">Treinta y dos fechas, cada una con su prueba.</span></span>
+      <span class="toc-m"><span class="en">32 entries</span><span class="es">32 entradas</span></span>
+    </a>
+    <a class="toc-card" href="#documents">
+      <span class="toc-n">02</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h11l5 5v21H8z"/><path d="M19 3v5h5"/><path d="M12 14h8M12 18h8"/><circle cx="20.5" cy="24" r="3.2"/></svg></span>
+      <span class="toc-t"><span class="en">The documents themselves</span><span class="es">Los documentos</span></span>
+      <span class="toc-d"><span class="en">The naturalisation certificate, the Gazette, the yearbook.</span><span class="es">La carta de naturaleza, la Gazette, el anuario.</span></span>
+      <span class="toc-m"><span class="en">3 facsimiles</span><span class="es">3 facsímiles</span></span>
+    </a>
+    <a class="toc-card" href="#money">
+      <span class="toc-n">03</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="19" height="13" rx="1.5"/><path d="m3.6 7 8.9 6.8L21.4 7"/><path d="M14 26h12"/><path d="m22.5 22.5 3.5 3.5-3.5 3.5"/></svg></span>
+      <span class="toc-t"><span class="en">Where the £2,000 went</span><span class="es">Las 2.000 libras</span></span>
+      <span class="toc-d"><span class="en">The payment of 9 July 1936, traced in and out.</span><span class="es">El pago del 9 de julio de 1936, de dónde sale y adónde va.</span></span>
+      <span class="toc-m"><span class="en">9 July 1936</span><span class="es">9 julio 1936</span></span>
+    </a>
+    <a class="toc-card" href="#maps">
+      <span class="toc-n">04</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23C10 8 22 8 27 23" stroke-dasharray="3 3.5"/><circle cx="5" cy="23" r="2.7" fill="currentColor" stroke="none"/><circle cx="27" cy="23" r="2.7" fill="currentColor" stroke="none"/></svg></span>
+      <span class="toc-t"><span class="en">Two journeys</span><span class="es">Dos viajes</span></span>
+      <span class="toc-d"><span class="en">Almería to London, and the route of the Dragon Rapide.</span><span class="es">De Almería a Londres, y la ruta del Dragon Rapide.</span></span>
+      <span class="toc-m"><span class="en">2 maps</span><span class="es">2 mapas</span></span>
+    </a>
+    <a class="toc-card" href="#network">
+      <span class="toc-n">05</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="3.4"/><circle cx="6" cy="7" r="2.2"/><circle cx="26" cy="7" r="2.2"/><circle cx="6" cy="25" r="2.2"/><circle cx="26" cy="25" r="2.2"/><path d="M13.5 13.7 7.6 8.5M18.5 13.7l5.9-5.2M13.5 18.3l-5.9 5.2M18.5 18.3l5.9 5.2"/></svg></span>
+      <span class="toc-t"><span class="en">The company he kept</span><span class="es">Con quién andaba</span></span>
+      <span class="toc-d"><span class="en">The men around him, and who answered to whom.</span><span class="es">Los hombres a su alrededor, y quién respondía ante quién.</span></span>
+      <span class="toc-m"><span class="en">the City</span><span class="es">la City</span></span>
+    </a>
+    <a class="toc-card" href="#why">
+      <span class="toc-n">06</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29V17"/><path d="M16 17 8.6 9.6M16 17l7.4-7.4"/><circle cx="7" cy="8" r="2.2"/><circle cx="25" cy="8" r="2.2"/></svg></span>
+      <span class="toc-t"><span class="en">Why a Republican financed a coup</span><span class="es">Por qué un republicano financió un golpe</span></span>
+      <span class="toc-d"><span class="en">How the man who voted in 1931 got to July 1936.</span><span class="es">Cómo el hombre que votó en 1931 llega a julio de 1936.</span></span>
+      <span class="toc-m"><span class="en">1931–1936</span><span class="es">1931–1936</span></span>
+    </a>
+    <a class="toc-card" href="#family">
+      <span class="toc-n">07</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="6" r="2.6"/><path d="M16 8.6v4M6 12.6h20M6 12.6v4.4M16 12.6v4.4M26 12.6v4.4"/><circle cx="6" cy="19.4" r="2.6"/><circle cx="16" cy="19.4" r="2.6"/><circle cx="26" cy="19.4" r="2.6"/></svg></span>
+      <span class="toc-t"><span class="en">The family</span><span class="es">La familia</span></span>
+      <span class="toc-d"><span class="en">Four children, all of them registered in north London.</span><span class="es">Cuatro hijos, todos inscritos en el norte de Londres.</span></span>
+      <span class="toc-m"><span class="en">4 children</span><span class="es">4 hijos</span></span>
+    </a>
+    <a class="toc-card" href="#argentina">
+      <span class="toc-n">08</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 26h26"/><path d="m4.5 26 8-12 4.5 6.5 3.5-4.5 7 10"/><circle cx="12.5" cy="14" r="2.6" fill="currentColor" stroke="none"/></svg></span>
+      <span class="toc-t"><span class="en">The Argentina chapter</span><span class="es">El capítulo argentino</span></span>
+      <span class="toc-d"><span class="en">The twins, the quinta, Bariloche, and what paid for it.</span><span class="es">Los gemelos, la quinta, Bariloche y de qué se vivía.</span></span>
+      <span class="toc-m"><span class="en">Buenos Aires</span><span class="es">Buenos Aires</span></span>
+    </a>
+    <a class="toc-card" href="#eldest">
+      <span class="toc-n">09</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13h22v15H5z"/><path d="M5 13 7.5 5h17L27 13"/><path d="M13 28v-8h6v8"/></svg></span>
+      <span class="toc-t"><span class="en">The eldest son</span><span class="es">El hijo mayor</span></span>
+      <span class="toc-d"><span class="en">José M. Mayorga Eraso, who built Simago.</span><span class="es">José M. Mayorga Eraso, el que levantó Simago.</span></span>
+      <span class="toc-m"><span class="en">Simago</span><span class="es">Simago</span></span>
+    </a>
+    <a class="toc-card" href="#next">
+      <span class="toc-n">10</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="24" height="16" rx="1.5"/><rect x="6" y="5" width="20" height="7" rx="1.5"/><path d="M13 19h6"/></svg></span>
+      <span class="toc-t"><span class="en">What is still in the boxes</span><span class="es">Lo que queda en las cajas</span></span>
+      <span class="toc-d"><span class="en">The open questions, and the archives that hold them.</span><span class="es">Las preguntas abiertas y los archivos donde están.</span></span>
+      <span class="toc-m"><span class="en">open leads</span><span class="es">pistas abiertas</span></span>
+    </a>
+    <a class="toc-card" href="#sources">
+      <span class="toc-n">11</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="9" r="1.5" fill="currentColor" stroke="none"/><path d="M10 9h17"/><circle cx="5" cy="16" r="1.5" fill="currentColor" stroke="none"/><path d="M10 16h17"/><circle cx="5" cy="23" r="1.5" fill="currentColor" stroke="none"/><path d="M10 23h12"/></svg></span>
+      <span class="toc-t"><span class="en">Sources</span><span class="es">Fuentes</span></span>
+      <span class="toc-d"><span class="en">Every claim, with its citation and its link.</span><span class="es">Cada afirmación, con su cita y su enlace.</span></span>
+      <span class="toc-m"><span class="en">17 sources</span><span class="es">17 fuentes</span></span>
+    </a>
+  </div>
+</nav>
+
 <section id="ledger">
   <div class="sechead">
     <h2 class="en">The ledger</h2>
     <h2 class="es">Cronología</h2>
-    <span class="note en">click any entry — 26 dated events</span>
-    <span class="note es">pulse cualquier entrada — 26 fechas</span>
+    <span class="note en">click any entry — 32 dated events</span>
+    <span class="note es">pulse cualquier entrada — 32 fechas</span>
   </div>
   <p class="lede en">Entries marked <em>documented</em> rest on an archive record or a peer-reviewed study. Entries marked <em>press</em> rest on a single well-researched newspaper account and have not been independently verified.</p>
   <p class="lede es">Las entradas marcadas <em>documentado</em> se apoyan en un registro de archivo o en bibliografía académica. Las marcadas <em>prensa</em> proceden de un único artículo periodístico, bien investigado pero no verificado de forma independiente.</p>
@@ -1601,7 +1744,13 @@ footer{padding-block:40px 56px; font-family:var(--mono); font-size:11.5px; color
 
   var host = document.getElementById('ledger-rows');
   var lang = 'en';
-  var openSet = {14:true};
+  // entries were written in the order they were researched; show them by date.
+  // Array.prototype.sort is stable, so entries sharing a year keep their hand-set order.
+  function yearOf(e){ var m = /[0-9]{4}/.exec(e.y.en); return m ? +m[0] : 0; }
+  E.sort(function(a,b){ return yearOf(a) - yearOf(b); });
+
+  var openSet = {};
+  for (var oi=0; oi<E.length; oi++){ if (E[oi].y.en === '9 Jul 1936') openSet[oi] = true; }
 
   function esc(t){
     return String(t).replace(/<[^>]*>/g,'').replace(/&/g,'&amp;').replace(/</g,'&lt;')
