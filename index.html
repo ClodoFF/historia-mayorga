@@ -411,6 +411,46 @@ a.brand .bars::after{
   .refs-t tr:first-child td:first-child{border-top:0; padding-top:0}
   .refs-t td:last-child{padding-bottom:10px}
 }
+/* ---------- sub-sections nested inside a section ---------- */
+.subsec{
+  margin-top:52px; padding-top:34px;
+  border-top:1px solid var(--rule);
+  scroll-margin-top:60px;
+}
+.subhead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:22px}
+.subnum{
+  font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.12em;
+  color:var(--accent); flex:none;
+}
+.subhead h3{font-size:clamp(20px,3vw,26px); line-height:1.15}
+.subhead .note{font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:.06em}
+
+
+/* ---------- a parent card that carries its children ---------- */
+.toc-card.toc-group{
+  display:flex; flex-direction:column; gap:0;
+  padding:15px 15px 13px;
+  transform:none;
+}
+.toc-card.toc-group:hover{transform:none; border-color:var(--rule); background:var(--surface)}
+.toc-group .toc-main{
+  display:flex; flex-direction:column; gap:5px;
+  text-decoration:none; color:inherit; padding-right:39px;
+}
+.toc-group .toc-main:hover .toc-t,.toc-group .toc-main:focus-visible .toc-t{color:var(--accent)}
+.toc-kid{
+  display:flex; align-items:baseline; gap:9px;
+  margin-top:9px; padding-top:9px; border-top:1px solid var(--rule-soft);
+  text-decoration:none; color:inherit;
+}
+.toc-kid:first-of-type{margin-top:auto}
+.kn{
+  font-family:var(--mono); font-size:9.5px; font-weight:600; letter-spacing:.1em;
+  color:var(--accent); flex:none; min-width:26px;
+}
+.kt{font-size:13px; line-height:1.32; text-wrap:pretty}
+.toc-kid:hover .kt,.toc-kid:focus-visible .kt{color:var(--accent)}
+
 </style>
 </head>
 <body>
@@ -455,7 +495,7 @@ a.brand .bars::after{
 <nav class="toc" id="toc" aria-labelledby="toc-h">
   <div class="toc-head">
     <h2 id="toc-h"><span class="en">Contents</span><span class="es">Índice</span></h2>
-    <span class="note"><span class="en">eleven sections — click to jump</span><span class="es">once secciones — pulse para saltar</span></span>
+    <span class="note"><span class="en">nine sections, two of them nested — click to jump</span><span class="es">nueve secciones, dos de ellas anidadas — pulse para saltar</span></span>
   </div>
   <div class="toc-grid">
     <a class="toc-card" href="#ledger">
@@ -500,36 +540,31 @@ a.brand .bars::after{
       <span class="toc-d"><span class="en">How the man who voted in 1931 got to July 1936.</span><span class="es">Cómo el hombre que votó en 1931 llega a julio de 1936.</span></span>
       <span class="toc-m"><span class="en">1931–1936</span><span class="es">1931–1936</span></span>
     </a>
-    <a class="toc-card" href="#family">
-      <span class="toc-n">07</span>
-      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="6" r="2.6"/><path d="M16 8.6v4M6 12.6h20M6 12.6v4.4M16 12.6v4.4M26 12.6v4.4"/><circle cx="6" cy="19.4" r="2.6"/><circle cx="16" cy="19.4" r="2.6"/><circle cx="26" cy="19.4" r="2.6"/></svg></span>
-      <span class="toc-t"><span class="en">The family</span><span class="es">La familia</span></span>
-      <span class="toc-d"><span class="en">Four children, all of them registered in north London.</span><span class="es">Cuatro hijos, todos inscritos en el norte de Londres.</span></span>
-      <span class="toc-m"><span class="en">4 children</span><span class="es">4 hijos</span></span>
-    </a>
-    <a class="toc-card" href="#argentina">
-      <span class="toc-n">08</span>
-      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 26h26"/><path d="m4.5 26 8-12 4.5 6.5 3.5-4.5 7 10"/><circle cx="12.5" cy="14" r="2.6" fill="currentColor" stroke="none"/></svg></span>
-      <span class="toc-t"><span class="en">The Argentina chapter, and the Duelos</span><span class="es">El capítulo argentino y la unión con los Duelo</span></span>
-      <span class="toc-d"><span class="en">The twins, the quinta, Bariloche, and what paid for it.</span><span class="es">Los gemelos, la quinta, Bariloche y de qué se vivía.</span></span>
-      <span class="toc-m"><span class="en">Buenos Aires</span><span class="es">Buenos Aires</span></span>
-    </a>
-    <a class="toc-card" href="#eldest">
-      <span class="toc-n">09</span>
-      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13h22v15H5z"/><path d="M5 13 7.5 5h17L27 13"/><path d="M13 28v-8h6v8"/></svg></span>
-      <span class="toc-t"><span class="en">The eldest son</span><span class="es">El hijo mayor</span></span>
-      <span class="toc-d"><span class="en">José M. Mayorga Eraso, who built Simago.</span><span class="es">José M. Mayorga Eraso, el que levantó Simago.</span></span>
-      <span class="toc-m"><span class="en">Simago</span><span class="es">Simago</span></span>
-    </a>
+    <div class="toc-card toc-group">
+      <a class="toc-main" href="#family">
+        <span class="toc-n">07</span>
+        <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="6" r="2.6"/><path d="M16 8.6v4M6 12.6h20M6 12.6v4.4M16 12.6v4.4M26 12.6v4.4"/><circle cx="6" cy="19.4" r="2.6"/><circle cx="16" cy="19.4" r="2.6"/><circle cx="26" cy="19.4" r="2.6"/></svg></span>
+        <span class="toc-t"><span class="en">The family, and where it went</span><span class="es">La familia, y ad&#243;nde fue</span></span>
+        <span class="toc-d"><span class="en">Four children, and the two countries they ended up in.</span><span class="es">Cuatro hijos, y los dos pa&#237;ses donde acabaron.</span></span>
+      </a>
+      <a class="toc-kid" href="#argentina">
+        <span class="kn">07.1</span>
+        <span class="kt"><span class="en">The Argentina chapter, and the Duelos</span><span class="es">El cap&#237;tulo argentino y la uni&#243;n con los Duelo</span></span>
+      </a>
+      <a class="toc-kid" href="#eldest">
+        <span class="kn">07.2</span>
+        <span class="kt"><span class="en">The eldest son</span><span class="es">El hijo mayor</span></span>
+      </a>
+    </div>
     <a class="toc-card" href="#next">
-      <span class="toc-n">10</span>
+      <span class="toc-n">08</span>
       <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="24" height="16" rx="1.5"/><rect x="6" y="5" width="20" height="7" rx="1.5"/><path d="M13 19h6"/></svg></span>
       <span class="toc-t"><span class="en">What is still in the boxes</span><span class="es">Lo que queda en las cajas</span></span>
       <span class="toc-d"><span class="en">The open questions, and the archives that hold them.</span><span class="es">Las preguntas abiertas y los archivos donde están.</span></span>
       <span class="toc-m"><span class="en">open leads</span><span class="es">pistas abiertas</span></span>
     </a>
     <a class="toc-card" href="#sources">
-      <span class="toc-n">11</span>
+      <span class="toc-n">09</span>
       <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="9" r="1.5" fill="currentColor" stroke="none"/><path d="M10 9h17"/><circle cx="5" cy="16" r="1.5" fill="currentColor" stroke="none"/><path d="M10 16h17"/><circle cx="5" cy="23" r="1.5" fill="currentColor" stroke="none"/><path d="M10 23h12"/></svg></span>
       <span class="toc-t"><span class="en">Sources</span><span class="es">Fuentes</span></span>
       <span class="toc-d"><span class="en">Every claim, with its citation and its link.</span><span class="es">Cada afirmación, con su cita y su enlace.</span></span>
@@ -1054,10 +1089,10 @@ a.brand .bars::after{
 
 <section id="family">
   <div class="sechead">
-    <h2 class="en">The family</h2>
-    <h2 class="es">La familia</h2>
-    <span class="note en">all four children born in north London</span>
-    <span class="note es">los cuatro hijos nacidos en el norte de Londres</span>
+    <h2 class="en">The family, and where it went</h2>
+    <h2 class="es">La familia, y ad&#243;nde fue</h2>
+    <span class="note en">four children, two countries, three generations</span>
+    <span class="note es">cuatro hijos, dos pa&#237;ses, tres generaciones</span>
   </div>
   <p class="lede en">He married <strong>María Eraso Santa Pau</strong> in Almería in 1910 — the sister of the schoolfriend he had gone to Marseille with. All four of their children were registered at birth in the <strong>Edmonton</strong> district of north London, between 1911 and 1919. They were Londoners from birth, and the family was living in the northern suburbs for a decade before the move to Chelsea.</p>
   <p class="lede es">Se casó con <strong>María Eraso Santa Pau</strong> en Almería en 1910 — hermana del compañero de colegio con el que había ido a Marsella. Los cuatro hijos se inscribieron al nacer en el distrito de <strong>Edmonton</strong>, al norte de Londres, entre 1911 y 1919. Fueron londinenses de nacimiento, y la familia vivió una década en los barrios del norte antes del traslado a Chelsea.</p>
@@ -1117,15 +1152,15 @@ a.brand .bars::after{
     <p class="en" style="max-width:70ch; font-size:15.5px; margin-top:18px">Note the address the yearbooks print: not London, not Almería, but <strong>New York</strong>. By the academic year 1938–39 the family's declared home had already left England. The move to Argentina was the end of that journey, not the start of it — which is how both versions of the story can be true at once: the father did move the household south, and the twins did reach it by way of North Carolina.</p>
     <p class="es" style="max-width:70ch; font-size:15.5px; margin-top:18px">Fíjese en la dirección que imprimen los anuarios: ni Londres ni Almería, sino <strong>Nueva York</strong>. En el curso 1938–39 el domicilio declarado de la familia ya había salido de Inglaterra. El traslado a Argentina fue el final del viaje, no el principio — y por eso las dos versiones pueden ser ciertas a la vez: el padre sí llevó a la familia al sur, y los gemelos sí llegaron pasando por Carolina del Norte.</p>
   </div>
-</section>
 
-<section id="argentina">
-  <div class="sechead">
-    <h2 class="en">The Argentina chapter, and the Duelos</h2>
-    <h2 class="es">El cap&#237;tulo argentino y la uni&#243;n con los Duelo</h2>
-    <span class="note en">two marriages, two families</span>
-    <span class="note es">dos matrimonios, dos familias</span>
-  </div>
+  <div class="subsec" id="argentina">
+    <div class="subhead">
+      <span class="subnum">07.1</span>
+      <h3 class="en">The Argentina chapter, and the Duelos</h3>
+      <h3 class="es">El cap&#237;tulo argentino y la uni&#243;n con los Duelo</h3>
+      <span class="note en">two marriages, two families</span>
+      <span class="note es">dos matrimonios, dos familias</span>
+    </div>
   <p class="lede en">He died in Argentina in 1970, thirty years after arriving, and for a long time that was almost all anyone could say about it. It turns out the record was not missing &mdash; it was in a genealogical database that refuses machine requests. What it holds is the rest of the family: exact dates, two marriages, and the two very different worlds the twins married into.</p>
   <p class="lede es">Muri&#243; en Argentina en 1970, treinta a&#241;os despu&#233;s de llegar, y durante mucho tiempo eso era casi todo lo que pod&#237;a decirse. Result&#243; que el registro no faltaba: estaba en una base genealógica que rechaza las consultas automáticas. Lo que guarda es el resto de la familia: fechas exactas, dos matrimonios y los dos mundos tan distintos en los que entraron los gemelos.</p>
 
@@ -1423,14 +1458,16 @@ a.brand .bars::after{
       <p style="margin-bottom:0"><strong>La muerte de Jos&#233; Mayorga en 1970.</strong> Se ha rastreado el <em>probate calendar</em> de Inglaterra y Gales en todos los a&#241;os de 1965 a 1981, por apellido y por nombre completo, y no aparece ni una vez: ni adjudicaci&#243;n, ni reconocimiento de una adjudicaci&#243;n argentina, ni nombramiento como albacea de nadie. Muri&#243; con domicilio en Argentina y su herencia no pas&#243; por ning&#250;n registro ingl&#233;s. El acta de defunci&#243;n, la sucesi&#243;n y las esquelas de <em>La Naci&#243;n</em> siguen siendo la v&#237;a de entrada.</p>
     </div>
   </div>
-</section>
-
-<section id="eldest">
-  <div class="sechead">
-    <h2 class="en">The eldest son</h2>
-    <h2 class="es">El hijo mayor</h2>
-    <span class="note">Jos&#233; M. Mayorga Eraso &#183; 1911&#8211;2003</span>
   </div>
+
+  <div class="subsec" id="eldest">
+    <div class="subhead">
+      <span class="subnum">07.2</span>
+      <h3 class="en">The eldest son</h3>
+      <h3 class="es">El hijo mayor</h3>
+      <span class="note en">Jos&#233; M. Mayorga Eraso &#183; 1911&#8211;2003</span>
+      <span class="note es">Jos&#233; M. Mayorga Eraso &#183; 1911&#8211;2003</span>
+    </div>
   <p class="lede en">He is in this story twice over. At twenty-five he was the assistant on the Dragon Rapide charter contract. Sixty-seven years later <em>El Pa&#237;s</em> buried him as the former chairman of Simago, the chain that taught Spain to shop cheaply &mdash; and in between he sat on the board of his father&rsquo;s bank and helped found the country&rsquo;s leading conservation body.</p>
   <p class="lede es">Aparece dos veces en esta historia. A los veinticinco fue el asistente en el contrato de alquiler del Dragon Rapide. Sesenta y siete a&#241;os despu&#233;s <em>El Pa&#237;s</em> lo despidi&#243; como expresidente de Simago, la cadena que ense&#241;&#243; a Espa&#241;a a comprar barato; y entre medias fue consejero del banco de su padre y cofundador de la principal organizaci&#243;n conservacionista del pa&#237;s.</p>
 
@@ -1549,6 +1586,7 @@ a.brand .bars::after{
 
   <p class="en" style="font-size:14px; color:var(--muted); margin-top:24px; max-width:76ch"><strong>A note on his name.</strong> Spanish sources, including Wikipedia, call him &ldquo;Jos&#233; Ma&#241;as Mayorga&rdquo;. That is a conflation with his father, Jos&#233; Mayorga <em>Ma&#241;as</em>. The son was <strong>Jos&#233; M. Mayorga Eraso</strong>, which is how <em>El Pa&#237;s</em> and the English birth register have him.</p>
   <p class="es" style="font-size:14px; color:var(--muted); margin-top:24px; max-width:76ch"><strong>Nota sobre su nombre.</strong> Las fuentes espa&#241;olas, Wikipedia incluida, lo llaman &laquo;Jos&#233; Ma&#241;as Mayorga&raquo;. Es una confusi&#243;n con su padre, Jos&#233; Mayorga <em>Ma&#241;as</em>. El hijo era <strong>Jos&#233; M. Mayorga Eraso</strong>, que es como lo registran <em>El Pa&#237;s</em> y el registro civil ingl&#233;s.</p>
+  </div>
 </section>
 
 <section id="next">
