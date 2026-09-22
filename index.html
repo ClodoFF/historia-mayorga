@@ -386,6 +386,19 @@ a.brand .bars::after{
   .toc-t{font-size:15.5px}
   .toc-d{font-size:13px}
 }
+/* ---------- decree-by-decree list ---------- */
+.dsteps{margin-top:18px; display:flex; flex-direction:column; gap:0}
+.dstep{display:grid; grid-template-columns:110px 1fr; gap:14px;
+  padding:12px 0; border-top:1px solid var(--rule-soft)}
+.dstep:first-child{border-top:0; padding-top:4px}
+.dwhen{font-family:var(--mono); font-size:11.5px; letter-spacing:.04em;
+  color:var(--accent); padding-top:3px; white-space:nowrap}
+.dwhat p{margin:0 0 .35em; font-size:15px; line-height:1.5}
+.dcite{font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; color:var(--muted); margin:0 !important}
+@media (max-width:560px){
+  .dstep{grid-template-columns:1fr; gap:3px}
+  .dwhen{padding-top:0}
+}
 </style>
 </head>
 <body>
@@ -1295,6 +1308,50 @@ a.brand .bars::after{
     </figure>
   </div>
 
+
+  <div class="caveat" style="margin-top:36px">
+    <h3 class="en" style="font-size:19px; margin-bottom:.4em">The other great-grandfather, decree by decree</h3>
+    <h3 class="es" style="font-size:19px; margin-bottom:.4em">El otro bisabuelo, decreto a decreto</h3>
+    <p class="en" style="font-size:15px; max-width:72ch">The family remembered a political father who held office somewhere near Zaragoza and then in Barcelona, and who left Spain during the war. The <em>Gaceta de Madrid</em> has all of it, and the last post is larger than anyone remembered.</p>
+    <p class="es" style="font-size:15px; max-width:72ch">La familia recordaba un padre pol&#237;tico con cargo por Zaragoza y luego en Barcelona, que sali&#243; de Espa&#241;a durante la guerra. La <em>Gaceta de Madrid</em> lo tiene todo, y el &#250;ltimo cargo es mayor de lo que nadie recordaba.</p>
+    <div class="dsteps">
+      <div class="dstep">
+        <div class="dwhen"><span class="en">27 Jun 1934</span><span class="es">27 jun 1934</span></div>
+        <div class="dwhat"><p class="en">Appointed <strong>civil governor of Granada</strong>, by decree signed by President Alcal&aacute;-Zamora and countersigned by the prime minister <strong>Ricardo Samper</strong> &mdash; a <em>Radical</em> government, three months before the CEDA entered the cabinet.</p><p class="es">Nombrado <strong>gobernador civil de Granada</strong>, por decreto firmado por Alcal&#225;-Zamora y refrendado por el presidente del Consejo <strong>Ricardo Samper</strong>: un gobierno <em>radical</em>, tres meses antes de que la CEDA entrara en el Gabinete.</p>
+          <p class="dcite"><a class="sl" href="https://www.boe.es/gazeta/dias/1934/06/28/pdfs/GMD-1934-179.pdf" target="_blank" rel="noopener">Gaceta n.&#186; 179, 28&#183;VI&#183;1934, p. 2012</a></p></div>
+      </div>
+      <div class="dstep">
+        <div class="dwhen"><span class="en">19 Aug 1935</span><span class="es">19 ago 1935</span></div>
+        <div class="dwhat"><p class="en">Moved to <strong>civil governor of Zaragoza</strong>. The decree says he &ldquo;holds the same office in Granada&rdquo;.</p><p class="es">Traslado a <strong>gobernador civil de Zaragoza</strong>. El decreto precisa que &#171;desempe&#241;a igual cargo en la de Granada&#187;.</p>
+          <p class="dcite"><a class="sl" href="https://www.boe.es/gazeta/dias/1935/08/20/pdfs/GMD-1935-232.pdf" target="_blank" rel="noopener">Gaceta n.&#186; 232, 20&#183;VIII&#183;1935, p. 1503</a></p></div>
+      </div>
+      <div class="dstep">
+        <div class="dwhen"><span class="en">13 Oct 1935</span><span class="es">13 oct 1935</span></div>
+        <div class="dwhat"><p class="en">The Ministry of War, under <strong>Gil Robles</strong>, awards him the <strong>Cruz de tercera clase de la Orden del M&eacute;rito Militar</strong>, white badge, without pension &mdash; a year after the October rising he had policed in Granada.</p><p class="es">El Ministerio de la Guerra, con <strong>Gil Robles</strong>, le concede la <strong>Cruz de tercera clase de la Orden del M&#233;rito Militar</strong>, distintivo blanco, sin pensi&#243;n: un a&#241;o despu&#233;s del octubre que le toc&#243; reprimir en Granada.</p>
+          <p class="dcite"><a class="sl" href="https://www.boe.es/gazeta/dias/1935/10/13/pdfs/GMD-1935-286.pdf" target="_blank" rel="noopener">Gaceta n.&#186; 286, 13&#183;X&#183;1935, pp. 281&#8211;282</a></p></div>
+      </div>
+      <div class="dstep">
+        <div class="dwhen"><span class="en">20 Dec 1935</span><span class="es">20 dic 1935</span></div>
+        <div class="dwhat"><p class="en">Confirmed again as <strong>civil governor of Zaragoza</strong> in Portela Valladares&rsquo;s wholesale reshuffle of the provinces.</p><p class="es">Confirmado de nuevo como <strong>gobernador civil de Zaragoza</strong> en el relevo general de provincias de Portela Valladares.</p>
+          <p class="dcite"><a class="sl" href="https://www.boe.es/gazeta/dias/1935/12/21/pdfs/GMD-1935-355.pdf" target="_blank" rel="noopener">Gaceta n.&#186; 355, 21&#183;XII&#183;1935, p. 2456</a></p></div>
+      </div>
+      <div class="dstep">
+        <div class="dwhen"><span class="en">31 Dec 1935</span><span class="es">31 dic 1935</span></div>
+        <div class="dwhat"><p class="en">Leaves Zaragoza and is appointed <strong>Delegado General de Orden P&uacute;blico en Catalu&ntilde;a</strong>, with the rank of <em>Jefe Superior de Administraci&oacute;n Civil</em> and residence in <strong>Barcelona</strong> &mdash; the central government&rsquo;s chief of public order for the whole of Catalonia.</p><p class="es">Deja Zaragoza y es nombrado <strong>delegado general de Orden P&#250;blico en Catalu&#241;a</strong>, con categor&#237;a de <em>jefe superior de Administraci&#243;n civil</em> y residencia en <strong>Barcelona</strong>: el jefe del orden p&#250;blico del Gobierno central para toda Catalu&#241;a.</p>
+          <p class="dcite"><a class="sl" href="https://www.boe.es/gazeta/dias/1936/01/01/pdfs/GMD-1936-1.pdf" target="_blank" rel="noopener">Gaceta n.&#186; 1, 1&#183;I&#183;1936, pp. 27 y 31</a></p></div>
+      </div>
+      <div class="dstep">
+        <div class="dwhen"><span class="en">17 Feb 1936</span><span class="es">17 feb 1936</span></div>
+        <div class="dwhat"><p class="en">The day after the Popular Front wins the election, his resignation is accepted. He is replaced by a retired lieutenant-colonel of the Civil Guard, Jos&eacute; Casellas y Puig de Masa.</p><p class="es">Al d&#237;a siguiente de la victoria del Frente Popular se le admite la dimisi&#243;n. Le sustituye un teniente coronel retirado de la Guardia Civil, Jos&#233; Casellas y Puig de Masa.</p>
+          <p class="dcite"><a class="sl" href="https://www.boe.es/gazeta/dias/1936/02/19/pdfs/GMD-1936-50.pdf" target="_blank" rel="noopener">Gaceta n.&#186; 50, 19&#183;II&#183;1936, p. 1449</a></p></div>
+      </div>
+    </div>
+    <p class="en" style="margin:1.2em 0 0; font-size:15px; max-width:72ch">That last post is the one that matters. It puts Zaragoza and then Barcelona in the right order, which is what the family remembered without knowing why; it explains why they left; and it leaves him, in February 1936, out of office and near the top of any list of men the incoming left had just removed from power. Five months later the war began. <span class="verdict v-doc">documented</span></p>
+    <p class="es" style="margin:1.2em 0 0; font-size:15px; max-width:72ch">Ese &#250;ltimo cargo es el que importa. Pone Zaragoza y luego Barcelona en el orden correcto, que es lo que la familia recordaba sin saber por qu&#233;; explica por qu&#233; se fueron; y lo deja, en febrero de 1936, sin puesto y en cabeza de cualquier lista de hombres a los que la izquierda entrante acababa de apartar del poder. Cinco meses despu&#233;s empez&#243; la guerra. <span class="verdict v-doc">documentado</span></p>
+    <p class="en" style="margin:.9em 0 0; font-size:14.5px; color:var(--muted); max-width:72ch">Still unverified: the supplies post at Barcelona city hall, his birth at Santiago de Cuba, his masonic membership, and the claim that he joined Francoist intelligence &mdash; SIFNE &mdash; from 1936.</p>
+    <p class="es" style="margin:.9em 0 0; font-size:14.5px; color:var(--muted); max-width:72ch">Sin verificar todav&#237;a: el puesto de abastos en el Ayuntamiento de Barcelona, su nacimiento en Santiago de Cuba, su pertenencia a la masoner&#237;a y su paso a la informaci&#243;n franquista &#8212;el SIFNE&#8212; desde 1936.</p>
+  </div>
+
   <div class="caveat">
     <h3 class="en">Both families were on the same side</h3>
     <h3 class="es">Las dos familias estaban en el mismo bando</h3>
@@ -1306,14 +1363,14 @@ a.brand .bars::after{
     <h3 class="en">What is still open</h3>
     <h3 class="es">Lo que sigue abierto</h3>
     <div class="en">
-      <p><strong>Francisco de Paula Duelo &#8212; found.</strong> He was <strong>Francisco de Paula Duelo y Font</strong>, appointed <strong>civil governor of Granada in June 1934</strong>, of the <em>Partido Republicano Radical</em>. That is a useful correction to the family account: the Radicals were Lerroux&rsquo;s centre-right republicans, not the Catholic right of the CEDA, though they governed in coalition with it. Granada in the second half of 1934 meant the October revolution and its repression. What remains open is the rest &#8212; the post at Barcelona city hall, and the claim that he joined Francoist intelligence from 1936.</p>
+      <p><strong>Francisco de Paula Duelo &#8212; found, and the job was bigger than anyone remembered.</strong> He belonged to the <em>Partido Republicano Radical</em>, Lerroux&rsquo;s centre-right republicans &#8212; not the Catholic right of the CEDA, though the two governed in coalition. Six decrees of the <em>Gaceta de Madrid</em> now carry his whole public career; they are set out in the panel above.</p>
       <p><strong>Eulogio Romero.</strong> Family memory holds that Jos&#233; Mayorga supported him in Buenos Aires for years, until his death. A private arrangement of that kind leaves no public trace by design, and nothing has been found. An approximate year of death would make his record findable in the <strong>Registro Civil</strong> of Buenos Aires.</p>
-      <p style="margin-bottom:0"><strong>Jos&#233; Mayorga&rsquo;s own death in 1970.</strong> There is no grant of probate for him in the England and Wales calendar, so he died domiciled in Argentina. The death certificate, the <em>sucesi&#243;n</em>, and the <em>La Naci&#243;n</em> notices remain the way in.</p>
+      <p style="margin-bottom:0"><strong>Jos&#233; Mayorga&rsquo;s own death in 1970.</strong> The England and Wales probate calendar has now been searched for every year from 1965 to 1981, by surname and by full name, and he does not appear once: no grant, no resealing of an Argentine grant, no appointment as anyone else&rsquo;s executor. He died domiciled in Argentina and his estate never touched an English registry. The death certificate, the <em>sucesi&#243;n</em>, and the <em>La Naci&#243;n</em> notices remain the way in.</p>
     </div>
     <div class="es">
-      <p><strong>Francisco de Paula Duelo, localizado.</strong> Era <strong>Francisco de Paula Duelo y Font</strong>, nombrado <strong>gobernador civil de Granada en junio de 1934</strong>, del <em>Partido Republicano Radical</em>. Es una correcci&#243;n &#250;til al relato familiar: los radicales eran los republicanos de centro-derecha de Lerroux, no la derecha cat&#243;lica de la CEDA, aunque gobernaran en coalici&#243;n con ella. Granada en la segunda mitad de 1934 significa la revoluci&#243;n de octubre y su represi&#243;n. Queda abierto lo dem&#225;s: el cargo en el Ayuntamiento de Barcelona y su paso a la informaci&#243;n franquista desde 1936.</p>
+      <p><strong>Francisco de Paula Duelo, localizado, y con un cargo mayor del que nadie recordaba.</strong> Era del <em>Partido Republicano Radical</em>, los republicanos de centro-derecha de Lerroux, no la derecha cat&#243;lica de la CEDA, aunque unos y otra gobernaran en coalici&#243;n. Seis decretos de la <em>Gaceta de Madrid</em> recogen ya toda su carrera p&#250;blica; van en el recuadro de arriba.</p>
       <p><strong>Eulogio Romero.</strong> La memoria familiar sostiene que Jos&#233; Mayorga le financi&#243; la vida en Buenos Aires durante a&#241;os, hasta su muerte. Un arreglo privado as&#237; no deja rastro p&#250;blico por definici&#243;n, y no se ha encontrado nada. Un a&#241;o aproximado de defunci&#243;n har&#237;a localizable su partida en el <strong>Registro Civil</strong> de Buenos Aires.</p>
-      <p style="margin-bottom:0"><strong>La muerte de Jos&#233; Mayorga en 1970.</strong> No hay declaraci&#243;n de herederos a su nombre en el <em>probate calendar</em> de Inglaterra y Gales, as&#237; que muri&#243; con domicilio en Argentina. El acta de defunci&#243;n, la sucesi&#243;n y las esquelas de <em>La Naci&#243;n</em> siguen siendo la v&#237;a de entrada.</p>
+      <p style="margin-bottom:0"><strong>La muerte de Jos&#233; Mayorga en 1970.</strong> Se ha rastreado el <em>probate calendar</em> de Inglaterra y Gales en todos los a&#241;os de 1965 a 1981, por apellido y por nombre completo, y no aparece ni una vez: ni adjudicaci&#243;n, ni reconocimiento de una adjudicaci&#243;n argentina, ni nombramiento como albacea de nadie. Muri&#243; con domicilio en Argentina y su herencia no pas&#243; por ning&#250;n registro ingl&#233;s. El acta de defunci&#243;n, la sucesi&#243;n y las esquelas de <em>La Naci&#243;n</em> siguen siendo la v&#237;a de entrada.</p>
     </div>
   </div>
 </section>
@@ -1517,6 +1574,8 @@ a.brand .bars::after{
     <li><b>Cuartas, Javier</b>, “José Mayorga, ex presidente de Simago”, <span class="t">El País</span>, 9·IV·2003 — <span class="en">the obituary: death in Madrid at 91, advisory director of Kleinwort Benson Ltd., president of Grupo Albión, founder of WWF-Adena.</span><span class="es">la necrológica: muerte en Madrid a los 91, consejero asesor de Kleinwort Benson Ltd., presidente del Grupo Albión, fundador de WWF-Adena.</span></li>
     <li><b>The National Archives, Kew.</b> HO 334/1025/67733 — <span class="en">certificate R3/67733, “Enriqueta Gomez Garcia de Mayorga”, b. Havana 28 October 1917, issued 17 June 1964; Home Office ref M 138198.</span><span class="es">carta R3/67733, «Enriqueta Gomez Garcia de Mayorga», n. La Habana 28 de octubre de 1917, expedida el 17 de junio de 1964; ref. Home Office M 138198.</span></li>
     <li><b>Genealogía Familiar</b> (genealogiafamiliar.net, árbol BVCZ), fichas F69663, F69664, F18338, F18339 y F884 — <span class="en">for the Argentine generations: exact dates for Fernando Mayorga Eraso, the Duelo Cavero and Piccaluga Braceras families. Compiled by Juan Manuel Medrano Balcarce and Diego M. Zigiotto; site maintained by Alfonso Beccar Varela.</span><span class="es">para las generaciones argentinas: fechas exactas de Fernando Mayorga Eraso y las familias Duelo Cavero y Piccaluga Braceras. Datos de Juan Manuel Medrano Balcarce y Diego M. Zigiotto; sitio mantenido por Alfonso Beccar Varela.</span></li>
+    <li><b>Gaceta de Madrid</b> &#8212; <span class="en">the public career of Francisco de Paula Duelo y Font, in six decrees: </span><span class="es">la carrera p&#250;blica de Francisco de Paula Duelo y Font, en seis decretos: </span><a class="sl" href="https://www.boe.es/gazeta/dias/1934/06/28/pdfs/GMD-1934-179.pdf" target="_blank" rel="noopener">n.&#186; 179, 28&#183;VI&#183;1934, p. 2012</a>; <a class="sl" href="https://www.boe.es/gazeta/dias/1935/08/20/pdfs/GMD-1935-232.pdf" target="_blank" rel="noopener">n.&#186; 232, 20&#183;VIII&#183;1935, p. 1503</a>; <a class="sl" href="https://www.boe.es/gazeta/dias/1935/10/13/pdfs/GMD-1935-286.pdf" target="_blank" rel="noopener">n.&#186; 286, 13&#183;X&#183;1935, pp. 281&#8211;282</a>; <a class="sl" href="https://www.boe.es/gazeta/dias/1935/12/21/pdfs/GMD-1935-355.pdf" target="_blank" rel="noopener">n.&#186; 355, 21&#183;XII&#183;1935, p. 2456</a>; <a class="sl" href="https://www.boe.es/gazeta/dias/1936/01/01/pdfs/GMD-1936-1.pdf" target="_blank" rel="noopener">n.&#186; 1, 1&#183;I&#183;1936, pp. 27 y 31</a>; <a class="sl" href="https://www.boe.es/gazeta/dias/1936/02/19/pdfs/GMD-1936-50.pdf" target="_blank" rel="noopener">n.&#186; 50, 19&#183;II&#183;1936, p. 1449</a>.</li>
+    <li><b>Probate calendars of England and Wales</b>, <a class="sl" href="https://probatesearch.service.gov.uk/" target="_blank" rel="noopener">HMCTS Find a Will</a> &#8212; <span class="en">1931 p. 74 (the Lengo estate) and 1945 pp. 267 and 281 (the two Smith estates of Caracas). Every year from 1965 to 1981 was searched for the surname and for the full name; there is no entry for Jos&eacute; Mayorga.</span><span class="es">1931 p. 74 (testamentar&#237;a Lengo) y 1945 pp. 267 y 281 (las dos testamentar&#237;as Smith de Caracas). Se buscaron el apellido y el nombre completo en todos los a&#241;os de 1965 a 1981: no hay ninguna entrada de Jos&#233; Mayorga.</span></li>
     <li><b>Archivo Histórico del Banco de España</b>, <a class="sl" href="https://www.bde.es/f/webbe/INF/MenuHorizontal/paraciudadano/archivo_historico/SECCIONES_AHBE.pdf" target="_blank" rel="noopener"><span class="t">Fondos documentales del Archivo Histórico</span></a>; <span class="en">and</span><span class="es">y</span> Martínez Ruiz, E. (2000), <span class="t">El control de cambios en la España franquista: el Instituto Español de Moneda Extranjera, 1939–1973</span>, <span class="en">doctoral thesis</span><span class="es">tesis doctoral</span>, Universidad de Alcalá.</li>
   </ol>
 
@@ -1606,9 +1665,9 @@ a.brand .bars::after{
 
     {y:{en:"May 1931",es:"Mayo 1931"}, era:"origins", k:"doc",
      t:{en:"“Jose Mayorga, of 20, Fenchurch-street, Bank Manager”", es:"«Jose Mayorga, of 20, Fenchurch-street, Bank Manager»"},
-     d:{en:"A Trustee Act notice in the London Gazette names him as one of three executors of the estate of Miguel Lengo, alongside the Midland Bank's trustee company and a City solicitor. It is dry, and it is the hard confirmation of his rank and his employer's address, independent of any newspaper.",
-        es:"Un anuncio de la <em>Trustee Act</em> en la London Gazette lo nombra uno de los tres albaceas de la testamentaría de Miguel Lengo, junto con la sociedad fiduciaria del Midland Bank y un abogado de la City. Es un documento árido, y es la confirmación dura de su cargo y de la dirección de su banco, al margen de cualquier periódico."},
-     s:{en:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/33714/page/3022' target='_blank' rel='noopener'>The London Gazette, issue 33714, p. 3022</a>", es:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/33714/page/3022' target='_blank' rel='noopener'>The London Gazette, n.º 33714, p. 3022</a>"}},
+     d:{en:"A Trustee Act notice in the London Gazette names him as one of three executors of the estate of Miguel Lengo, alongside the Midland Bank's trustee company and a City solicitor. The probate calendar fills it in: Lengo of 2 Ennismore-avenue, Chiswick, died 4 February 1931; probate was granted in London on 28 March to the Midland Bank Executor and Trustee Company Limited, George Coward Bingham solicitor and <em>Jose Mayorga manager</em>. Effects £38,492 0s. 1d., resworn £38,598 15s. 8d. — nineteen times the sum he handed over five years later.",
+        es:"Un anuncio de la <em>Trustee Act</em> en la London Gazette lo nombra uno de los tres albaceas de la testamentaría de Miguel Lengo, junto con la sociedad fiduciaria del Midland Bank y un abogado de la City. El <em>probate calendar</em> lo completa: Lengo, de 2 Ennismore-avenue, Chiswick, murió el 4 de febrero de 1931, y el 28 de marzo se adjudicó en Londres la testamentaría al Midland Bank Executor and Trustee Company Limited, al abogado George Coward Bingham y a <em>Jose Mayorga manager</em>. Caudal: 38.492 libras 0 ch. 1 p., revalorado en 38.598 libras 15 ch. 8 p.; diecinueve veces la cantidad que entregó cinco años después."},
+     s:{en:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/33714/page/3022' target='_blank' rel='noopener'>The London Gazette, issue 33714, p. 3022</a>; <a class='sl' href='https://probatesearch.service.gov.uk/' target='_blank' rel='noopener'>Probate calendar (England &amp; Wales), 1931, p. 74</a>", es:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/33714/page/3022' target='_blank' rel='noopener'>The London Gazette, n.º 33714, p. 3022</a>; <a class='sl' href='https://probatesearch.service.gov.uk/' target='_blank' rel='noopener'>Probate calendar (Inglaterra y Gales), 1931, p. 74</a>"}},
 
     {y:{en:"1931",es:"1931"}, era:"origins", k:"press",
      t:{en:"The Republic asks him for help", es:"La República le pide ayuda"},
@@ -1684,9 +1743,9 @@ a.brand .bars::after{
 
     {y:{en:"Nov 1945",es:"Nov. 1945"}, era:"after", k:"doc",
      t:{en:"Still working, still in the Gazette", es:"Sigue trabajando, sigue en la Gazette"},
-     d:{en:"Two Trustee Act notices name him as attorney for Dolores Hernaiz de Diaz Castro in the estates of Alberto Smith and Dolores de las Casas Smith, both of Caracas — the Latin American practice he had built for Kleinwort's from the Havana trip onward.",
-        es:"Dos anuncios de la <em>Trustee Act</em> lo nombran apoderado de Dolores Hernaiz de Díaz Castro en las testamentarías de Alberto Smith y Dolores de las Casas Smith, ambos de Caracas: la práctica latinoamericana que había construido para Kleinwort desde el viaje a La Habana."},
-     s:{en:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/37371/page/5880' target='_blank' rel='noopener'>The London Gazette, issue 37371, p. 5880</a>", es:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/37371/page/5880' target='_blank' rel='noopener'>The London Gazette, n.º 37371, p. 5880</a>"}},
+     d:{en:"Two Trustee Act notices name him as attorney for Dolores Hernaiz de Diaz Castro in the estates of Alberto Smith and Dolores de las Casas Smith, both of Caracas — the Latin American practice he had built for Kleinwort's from the Havana trip onward. The probate calendar gives both grants, each to <em>Jose Mayorga banker</em> at Llandudno, where the Principal Probate Registry had been evacuated: 29 September 1945 for the widow (died Caracas, 10 November 1943; £2,049 in England) and 21 November for her husband (died 26 June 1942 at Villa Lola, Arismendi-avenue, El Paraíso; £926 in England).",
+        es:"Dos anuncios de la <em>Trustee Act</em> lo nombran apoderado de Dolores Hernaiz de Díaz Castro en las testamentarías de Alberto Smith y Dolores de las Casas Smith, ambos de Caracas: la práctica latinoamericana que había construido para Kleinwort desde el viaje a La Habana. El <em>probate calendar</em> da las dos adjudicaciones a <em>Jose Mayorga banker</em> en Llandudno, adonde se había evacuado el registro central de testamentarías: el 29 de septiembre de 1945 la de la viuda (fallecida en Caracas el 10 de noviembre de 1943; 2.049 libras en Inglaterra) y el 21 de noviembre la del marido (fallecido el 26 de junio de 1942 en Villa Lola, avenida Arismendi, El Paraíso; 926 libras en Inglaterra)."},
+     s:{en:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/37371/page/5880' target='_blank' rel='noopener'>The London Gazette, issue 37371, p. 5880</a>; <a class='sl' href='https://probatesearch.service.gov.uk/' target='_blank' rel='noopener'>Probate calendar (England &amp; Wales), 1945, pp. 267 and 281</a>", es:"<a class='sl' href='https://www.thegazette.co.uk/London/issue/37371/page/5880' target='_blank' rel='noopener'>The London Gazette, n.º 37371, p. 5880</a>; <a class='sl' href='https://probatesearch.service.gov.uk/' target='_blank' rel='noopener'>Probate calendar (Inglaterra y Gales), 1945, pp. 267 y 281</a>"}},
 
     {y:{en:"1960",es:"1960"}, era:"after", k:"doc",
      t:{en:"His eldest son founds Simago", es:"Su hijo mayor funda Simago"},
