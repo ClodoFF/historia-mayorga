@@ -307,6 +307,14 @@ footer{padding-block:40px 56px; font-family:var(--mono); font-size:11.5px; color
 .leader{stroke:var(--accent); stroke-width:1; fill:none}
 .foot{font-family:"IBM Plex Mono",monospace; font-size:9.5px; fill:currentColor; opacity:.5}
 
+/* ---------- two-windows diagram ---------- */
+.zone{fill:none; stroke:currentColor; stroke-width:1; opacity:.34; stroke-dasharray:5 4}
+.zone-t{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.14em; fill:currentColor; opacity:.6}
+.gate-x{stroke:currentColor; stroke-width:2.2; opacity:.5; stroke-linecap:round}
+.gate-t{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.06em}
+.gate-no{fill:currentColor; opacity:.55}
+.gate-yes{fill:var(--accent)}
+
 /* ---------- responsive diagrams ---------- */
 .flowstack{display:none}
 .flowstack ol{list-style:none; margin:0; padding:0; counter-reset:fs}
@@ -495,7 +503,7 @@ a.brand .bars::after{
 <nav class="toc" id="toc" aria-labelledby="toc-h">
   <div class="toc-head">
     <h2 id="toc-h"><span class="en">Contents</span><span class="es">Índice</span></h2>
-    <span class="note"><span class="en">nine sections, two of them nested — click to jump</span><span class="es">nueve secciones, dos de ellas anidadas — pulse para saltar</span></span>
+    <span class="note"><span class="en">ten sections, two of them nested — click to jump</span><span class="es">diez secciones, dos de ellas anidadas — pulse para saltar</span></span>
   </div>
   <div class="toc-grid">
     <a class="toc-card" href="#ledger">
@@ -519,22 +527,29 @@ a.brand .bars::after{
       <span class="toc-d"><span class="en">The payment of 9 July 1936, traced in and out.</span><span class="es">El pago del 9 de julio de 1936, de dónde sale y adónde va.</span></span>
       <span class="toc-m"><span class="en">9 July 1936</span><span class="es">9 julio 1936</span></span>
     </a>
-    <a class="toc-card" href="#maps">
+    <a class="toc-card" href="#permission">
       <span class="toc-n">04</span>
+      <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="11" height="22" rx="1.5"/><rect x="17.5" y="5" width="11" height="22" rx="1.5"/><path d="M6 16h6"/><path d="m20 12 6 4-6 4"/></svg></span>
+      <span class="toc-t"><span class="en">London&rsquo;s two windows</span><span class="es">Las dos ventanillas de Londres</span></span>
+      <span class="toc-d"><span class="en">Why one side&rsquo;s money moved and the other&rsquo;s did not.</span><span class="es">Por qu&eacute; el dinero de un bando se mov&iacute;a y el del otro no.</span></span>
+      <span class="toc-m"><span class="en">1 diagram</span><span class="es">1 diagrama</span></span>
+    </a>
+    <a class="toc-card" href="#maps">
+      <span class="toc-n">05</span>
       <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23C10 8 22 8 27 23" stroke-dasharray="3 3.5"/><circle cx="5" cy="23" r="2.7" fill="currentColor" stroke="none"/><circle cx="27" cy="23" r="2.7" fill="currentColor" stroke="none"/></svg></span>
       <span class="toc-t"><span class="en">Two journeys</span><span class="es">Dos viajes</span></span>
       <span class="toc-d"><span class="en">Almería to London, and the route of the Dragon Rapide.</span><span class="es">De Almería a Londres, y la ruta del Dragon Rapide.</span></span>
       <span class="toc-m"><span class="en">2 maps</span><span class="es">2 mapas</span></span>
     </a>
     <a class="toc-card" href="#network">
-      <span class="toc-n">05</span>
+      <span class="toc-n">06</span>
       <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="3.4"/><circle cx="6" cy="7" r="2.2"/><circle cx="26" cy="7" r="2.2"/><circle cx="6" cy="25" r="2.2"/><circle cx="26" cy="25" r="2.2"/><path d="M13.5 13.7 7.6 8.5M18.5 13.7l5.9-5.2M13.5 18.3l-5.9 5.2M18.5 18.3l5.9 5.2"/></svg></span>
       <span class="toc-t"><span class="en">The company he kept</span><span class="es">Con quién andaba</span></span>
       <span class="toc-d"><span class="en">The men around him, and who answered to whom.</span><span class="es">Los hombres a su alrededor, y quién respondía ante quién.</span></span>
       <span class="toc-m"><span class="en">the City</span><span class="es">la City</span></span>
     </a>
     <a class="toc-card" href="#why">
-      <span class="toc-n">06</span>
+      <span class="toc-n">07</span>
       <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 29V17"/><path d="M16 17 8.6 9.6M16 17l7.4-7.4"/><circle cx="7" cy="8" r="2.2"/><circle cx="25" cy="8" r="2.2"/></svg></span>
       <span class="toc-t"><span class="en">Why a Republican financed a coup</span><span class="es">Por qué un republicano financió un golpe</span></span>
       <span class="toc-d"><span class="en">How the man who voted in 1931 got to July 1936.</span><span class="es">Cómo el hombre que votó en 1931 llega a julio de 1936.</span></span>
@@ -542,7 +557,7 @@ a.brand .bars::after{
     </a>
     <div class="toc-card toc-group">
       <a class="toc-main" href="#family">
-        <span class="toc-n">07</span>
+        <span class="toc-n">08</span>
         <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="6" r="2.6"/><path d="M16 8.6v4M6 12.6h20M6 12.6v4.4M16 12.6v4.4M26 12.6v4.4"/><circle cx="6" cy="19.4" r="2.6"/><circle cx="16" cy="19.4" r="2.6"/><circle cx="26" cy="19.4" r="2.6"/></svg></span>
         <span class="toc-t"><span class="en">The family, and where it went</span><span class="es">La familia, y ad&#243;nde fue</span></span>
         <span class="toc-d"><span class="en">Four children, and the two countries they ended up in.</span><span class="es">Cuatro hijos, y los dos pa&#237;ses donde acabaron.</span></span>
@@ -557,14 +572,14 @@ a.brand .bars::after{
       </a>
     </div>
     <a class="toc-card" href="#next">
-      <span class="toc-n">08</span>
+      <span class="toc-n">09</span>
       <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="24" height="16" rx="1.5"/><rect x="6" y="5" width="20" height="7" rx="1.5"/><path d="M13 19h6"/></svg></span>
       <span class="toc-t"><span class="en">What is still in the boxes</span><span class="es">Lo que queda en las cajas</span></span>
       <span class="toc-d"><span class="en">The open questions, and the archives that hold them.</span><span class="es">Las preguntas abiertas y los archivos donde están.</span></span>
       <span class="toc-m"><span class="en">open leads</span><span class="es">pistas abiertas</span></span>
     </a>
     <a class="toc-card" href="#sources">
-      <span class="toc-n">09</span>
+      <span class="toc-n">10</span>
       <span class="toc-g" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="9" r="1.5" fill="currentColor" stroke="none"/><path d="M10 9h17"/><circle cx="5" cy="16" r="1.5" fill="currentColor" stroke="none"/><path d="M10 16h17"/><circle cx="5" cy="23" r="1.5" fill="currentColor" stroke="none"/><path d="M10 23h12"/></svg></span>
       <span class="toc-t"><span class="en">Sources</span><span class="es">Fuentes</span></span>
       <span class="toc-d"><span class="en">Every claim, with its citation and its link.</span><span class="es">Cada afirmación, con su cita y su enlace.</span></span>
@@ -793,6 +808,152 @@ a.brand .bars::after{
   </div>
   <p class="en" style="font-size:15px; color:var(--muted); margin-top:16px; max-width:72ch">For scale: £800,000 in 1937 is roughly £60–70 million in today's money. The Banco de España's own research series describes Kleinwort, Sons &amp; Co. as <em>“the Francoists' principal financial agent in the City of London.”</em> The man running that bank was from Almería — a city Italian aircraft would bomb more than fifty times before the war ended.</p>
   <p class="es" style="font-size:15px; color:var(--muted); margin-top:16px; max-width:72ch">Para hacerse una idea: 800.000 libras de 1937 equivalen a unos 60–70 millones de libras actuales. La propia serie de estudios del Banco de España describe a Kleinwort &amp; Sons como <em>«principal agente financiero de los franquistas en la City londinense»</em>. Quien dirigía ese banco era almeriense — de una ciudad que la aviación italiana bombardearía más de cincuenta veces antes de acabar la guerra.</p>
+</section>
+
+
+<section id="permission">
+  <div class="sechead">
+    <h2 class="en">London&rsquo;s two windows</h2>
+    <h2 class="es">Las dos ventanillas de Londres</h2>
+    <span class="note">1936&ndash;1939</span>
+  </div>
+  <p class="lede en">The &pound;2,000 was a private payment out of a private bank, and on its own it explains nothing. The question it leaves is why that was so easy &mdash; and why the same city made the other side&rsquo;s money so hard. The answer is not hidden: it is in the Banco de Espa&ntilde;a&rsquo;s own research series, reconstructed largely from the Bank of England&rsquo;s own files.</p>
+  <p class="lede es">Las 2.000 libras fueron un pago privado desde un banco privado, y por s&iacute; solas no explican nada. La pregunta que dejan es por qu&eacute; result&oacute; tan f&aacute;cil, y por qu&eacute; la misma ciudad hizo tan dif&iacute;cil el dinero del otro bando. La respuesta no est&aacute; escondida: est&aacute; en la serie de investigaci&oacute;n del propio Banco de Espa&ntilde;a, reconstruida sobre todo a partir de los expedientes del propio Banco de Inglaterra.</p>
+
+  <figure style="margin-top:32px">
+    <div class="figscroll figflow">
+    <svg viewBox="0 0 980 448" role="img" aria-label="Diagram: in London between 1936 and 1939 two channels ran in parallel. The Spanish Republic's sterling export earnings accumulated in the Spanish Reserve Fund, managed by the Bank of England, and were blocked: nothing was released, including an advance of 1.75 million pounds made by the Bank of Spain. Juan March's account at Kleinwort, Sons and Co. of 20 Fenchurch Street, run by Jose Mayorga, passed without obstruction and produced credits to the Nationalist side of 500,000 pounds raised to 800,000 in April 1937 and 1,000,000 pounds in October 1937. Meanwhile the Bank of England had suspended relations with the Bank of Spain.">
+      <defs>
+        <marker id="ahw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <polygon points="0,0 10,5 0,10" fill="var(--accent)"></polygon>
+        </marker>
+        <marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <polygon points="0,0 10,5 0,10" fill="currentColor" opacity="0.45"></polygon>
+        </marker>
+      </defs>
+
+      <rect class="zone" x="228" y="16" width="264" height="340" rx="2"></rect>
+      <text class="zone-t en" x="360" y="36" text-anchor="middle">LONDON &middot; 1936&ndash;1939</text>
+      <text class="zone-t es" x="360" y="36" text-anchor="middle">LONDRES &middot; 1936&ndash;1939</text>
+
+      <rect class="box" x="8" y="62" width="180" height="82" rx="2"></rect>
+      <text class="node-label en" x="24" y="90">The Republic</text>
+      <text class="node-label es" x="24" y="90">La Rep&uacute;blica</text>
+      <text class="node-sub en" x="24" y="109">sterling earned by exporting</text>
+      <text class="node-sub es" x="24" y="109">libras ganadas exportando</text>
+      <text class="node-sub en" x="24" y="124">iron, mercury, citrus</text>
+      <text class="node-sub es" x="24" y="124">hierro, mercurio, c&iacute;tricos</text>
+
+      <line class="tie" x1="188" y1="103" x2="234" y2="103" marker-end="url(#ahm)"></line>
+
+      <rect class="box" x="240" y="56" width="240" height="94" rx="2"></rect>
+      <text class="node-label" x="256" y="82">Spanish Reserve Fund</text>
+      <text class="node-sub en" x="256" y="101">managed by the Bank of England</text>
+      <text class="node-sub es" x="256" y="101">lo gestiona el Banco de Inglaterra</text>
+      <text class="node-sub en" x="256" y="117">the sterling piles up;</text>
+      <text class="node-sub es" x="256" y="117">las libras se acumulan;</text>
+      <text class="node-sub en" x="256" y="132">payments are not resumed</text>
+      <text class="node-sub es" x="256" y="132">los pagos no se restablecen</text>
+
+      <line class="gate-x" x1="529" y1="92" x2="557" y2="114"></line>
+      <line class="gate-x" x1="557" y1="92" x2="529" y2="114"></line>
+      <text class="gate-t gate-no en" x="543" y="136" text-anchor="middle">blocked</text>
+      <text class="gate-t gate-no es" x="543" y="136" text-anchor="middle">bloqueado</text>
+
+      <rect class="box" x="606" y="56" width="366" height="94" rx="2"></rect>
+      <text class="node-label en" x="622" y="82">Nothing is released</text>
+      <text class="node-label es" x="622" y="82">No se libera nada</text>
+      <text class="amount en" x="622" y="105">&pound;1.75 m</text>
+      <text class="amount es" x="622" y="105">1,75 M &pound;</text>
+      <text class="node-sub en" x="694" y="105">an advance by the Bank of Spain, held</text>
+      <text class="node-sub es" x="694" y="105">anticipo del Banco de Espa&ntilde;a, retenido</text>
+      <text class="node-sub en" x="622" y="124">11 May 1937: Azc&aacute;rate protests to Anthony Eden.</text>
+      <text class="node-sub es" x="622" y="124">11&middot;V&middot;1937: Azc&aacute;rate protesta ante Anthony Eden.</text>
+      <text class="node-sub en" x="622" y="139">Nothing moves.</text>
+      <text class="node-sub es" x="622" y="139">Nada se mueve.</text>
+
+      <rect class="box" x="8" y="248" width="180" height="82" rx="2"></rect>
+      <text class="node-label" x="24" y="276">Juan March</text>
+      <text class="node-sub en" x="24" y="295">accounts moved here, 1933</text>
+      <text class="node-sub es" x="24" y="295">cuentas aqu&iacute; desde 1933</text>
+      <text class="node-sub en" x="24" y="310">richest man in Spain</text>
+      <text class="node-sub es" x="24" y="310">el m&aacute;s rico de Espa&ntilde;a</text>
+
+      <line class="flow" x1="188" y1="289" x2="234" y2="289" marker-end="url(#ahw)"></line>
+
+      <rect class="box-hot" x="240" y="242" width="240" height="94" rx="2"></rect>
+      <text class="node-label" x="256" y="268">Kleinwort, Sons &amp; Co.</text>
+      <text class="node-sub" x="256" y="286">20 Fenchurch Street, EC3</text>
+      <text class="node-sub en" x="256" y="302">general manager since 1929:</text>
+      <text class="node-sub es" x="256" y="302">director general desde 1929:</text>
+      <text class="node-label" x="256" y="322" fill="var(--accent)">Jos&eacute; Mayorga</text>
+
+      <line class="flow" x1="490" y1="289" x2="600" y2="289" marker-end="url(#ahw)"></line>
+      <text class="gate-t gate-yes en" x="543" y="274" text-anchor="middle">waved through</text>
+      <text class="gate-t gate-yes es" x="543" y="274" text-anchor="middle">sin trabas</text>
+
+      <rect class="box" x="606" y="236" width="366" height="106" rx="2"></rect>
+      <text class="node-label en" x="622" y="262">Credits to the Nationalist side</text>
+      <text class="node-label es" x="622" y="262">Cr&eacute;ditos al bando nacional</text>
+      <text class="amount en" x="622" y="286">&pound;500,000 &rarr; 800,000</text>
+      <text class="amount es" x="622" y="286">500.000 &rarr; 800.000 &pound;</text>
+      <text class="node-sub en" x="766" y="286">April 1937 &middot; 4% p.a.</text>
+      <text class="node-sub es" x="766" y="286">abril 1937 &middot; 4&nbsp;% anual</text>
+      <text class="amount en" x="622" y="308">&pound;1,000,000</text>
+      <text class="amount es" x="622" y="308">1.000.000 &pound;</text>
+      <text class="node-sub en" x="710" y="308">October 1937 &middot; 3% p.a.</text>
+      <text class="node-sub es" x="710" y="308">octubre 1937 &middot; 3&nbsp;% anual</text>
+      <text class="node-sub en" x="622" y="328">both acknowledged in the secret Ley Reservada of 1 April 1939</text>
+      <text class="node-sub es" x="622" y="328">ambos reconocidos en la Ley Reservada de 1 de abril de 1939</text>
+
+      <text class="node-label" x="252" y="404" text-anchor="end">Banco de Inglaterra</text>
+      <line class="tie" x1="266" y1="400" x2="366" y2="400"></line>
+      <line class="gate-x" x1="382" y1="390" x2="404" y2="410"></line>
+      <line class="gate-x" x1="404" y1="390" x2="382" y2="410"></line>
+      <line class="tie" x1="420" y1="400" x2="520" y2="400"></line>
+      <text class="node-label" x="534" y="404">Banco de Espa&ntilde;a</text>
+      <text class="edge-label en" x="393" y="432" text-anchor="middle">relations suspended for the duration of the war</text>
+      <text class="edge-label es" x="393" y="432" text-anchor="middle">relaciones suspendidas mientras dur&oacute; la guerra</text>
+    </svg>
+    </div>
+
+    <div class="flowstack">
+      <ol>
+        <li><div class="fsbox"><b class="en">The Republic</b><b class="es">La Rep&uacute;blica</b><span class="en">Sterling earned by exporting iron, mercury and citrus.</span><span class="es">Libras ganadas exportando hierro, mercurio y c&iacute;tricos.</span></div>
+          <div class="fsedge"><span class="en">&darr; into the clearing account</span><span class="es">&darr; a la cuenta de compensaci&oacute;n</span></div></li>
+        <li><div class="fsbox"><b>Spanish Reserve Fund</b><span class="en">Managed by the Bank of England. The sterling piles up; payments to Spain are not resumed.</span><span class="es">Lo gestiona el Banco de Inglaterra. Las libras se acumulan; los pagos a Espa&ntilde;a no se restablecen.</span></div>
+          <div class="fsedge"><span class="en">&darr; blocked</span><span class="es">&darr; bloqueado</span></div></li>
+        <li><div class="fsbox"><b class="en">Nothing is released</b><b class="es">No se libera nada</b><span class="en">&pound;1.75 m of it an advance made by the Bank of Spain itself. On 11 May 1937 ambassador Azc&aacute;rate protests to Anthony Eden. Nothing moves.</span><span class="es">1,75 millones de libras eran un anticipo del propio Banco de Espa&ntilde;a. El 11 de mayo de 1937 el embajador Azc&aacute;rate protesta ante Anthony Eden. Nada se mueve.</span></div></li>
+        <li><div class="fsbox"><b>Juan March</b><span class="en">Spain&rsquo;s richest man. Accounts at Kleinwort&rsquo;s since 1933.</span><span class="es">El hombre m&aacute;s rico de Espa&ntilde;a. Cuentas en Kleinwort desde 1933.</span></div>
+          <div class="fsedge"><span class="en">&darr; the other window</span><span class="es">&darr; la otra ventanilla</span></div></li>
+        <li><div class="fsbox hot"><b>Kleinwort, Sons &amp; Co.</b><span>20 Fenchurch Street, EC3</span><span class="en">General manager since 1929: Jos&eacute; Mayorga</span><span class="es">Director general desde 1929: Jos&eacute; Mayorga</span></div>
+          <div class="fsedge"><span class="en">&darr; waved through</span><span class="es">&darr; sin trabas</span></div></li>
+        <li><div class="fsbox"><b class="en">Credits to the Nationalist side</b><b class="es">Cr&eacute;ditos al bando nacional</b><span class="en">&pound;500,000 raised to &pound;800,000, April 1937, at 4%. &pound;1,000,000, October 1937, at 3%. Both acknowledged in the secret <em>Ley Reservada</em> of 1 April 1939.</span><span class="es">500.000 libras ampliadas a 800.000, abril de 1937, al 4&nbsp;%. Un mill&oacute;n de libras, octubre de 1937, al 3&nbsp;%. Ambos reconocidos en la <em>Ley Reservada</em> de 1 de abril de 1939.</span></div></li>
+      </ol>
+    </div>
+    <figcaption><span class="en">Two channels, one city, three years. Figures and sequence from Elena Mart&iacute;nez Ruiz, <em>Guerra civil, comercio y capital extranjero</em>, Banco de Espa&ntilde;a, Estudios de Historia Econ&oacute;mica n&ordm; 49 (2006), pp. 26&ndash;28 and 78.</span><span class="es">Dos canales, una ciudad, tres a&ntilde;os. Cifras y secuencia de Elena Mart&iacute;nez Ruiz, <em>Guerra civil, comercio y capital extranjero</em>, Banco de Espa&ntilde;a, Estudios de Historia Econ&oacute;mica n.&ordm; 49 (2006), pp. 26-28 y 78.</span></figcaption>
+  </figure>
+
+  <h3 class="en" style="margin-top:34px">The reason given, and the reason</h3>
+  <h3 class="es" style="margin-top:34px">La raz&oacute;n dada, y la raz&oacute;n</h3>
+  <p class="en">The Bank of England was not a bystander here. It <strong>managed the Anglo-Spanish payments agreement</strong> and was its chief technical authority. The sterling Spain was owed accumulated in London while payments were not resumed, and the reason given was that the Republican authorities could not guarantee payment throughout the national territory. The Nationalist authorities could not guarantee it either. Only in the Republican case was that treated as an obstacle. <span class="verdict v-doc">documented</span></p>
+  <p class="es">El Banco de Inglaterra no fue aqu&iacute; un espectador. <strong>Gestionaba el acuerdo de pagos hispano-brit&aacute;nico</strong> y era su principal autoridad t&eacute;cnica. Las libras que se deb&iacute;an a Espa&ntilde;a se acumulaban en Londres sin que se restablecieran los pagos, y la raz&oacute;n que se daba era que las autoridades republicanas no pod&iacute;an garantizar los pagos en todo el territorio nacional. Las autoridades franquistas tampoco pod&iacute;an. Solo en el caso republicano se consider&oacute; eso un obst&aacute;culo. <span class="verdict v-doc">documentado</span></p>
+
+  <p class="en">The asymmetry ran through every stage. The Republic was made to pay for its purchases in advance while the British government studied how to ease payments to the insurgents. Negotiations with Burgos began before the Spanish government had been told that Britain meant to denounce the treaty at all. British officials would have preferred Spain itself to break the agreement, so that sterling could be sent to Franco&rsquo;s zone without &mdash; in the phrase that survives in the files &mdash; losing face. In March 1937 a meeting of the Board of Trade, the Treasury, the Bank of England, the British embassy in Valencia and the Clearing Office resolved openly to stall the Spanish negotiator.</p>
+  <p class="es">La asimetr&iacute;a recorre todas las fases. A la Rep&uacute;blica se le oblig&oacute; a pagar por adelantado mientras el Gobierno brit&aacute;nico estudiaba c&oacute;mo facilitar los pagos a los sublevados. Las negociaciones con Burgos empezaron antes de que al Gobierno espa&ntilde;ol se le hubiera comunicado siquiera la intenci&oacute;n de denunciar el tratado. Los responsables brit&aacute;nicos habr&iacute;an preferido que fuera Espa&ntilde;a la que rompiese el acuerdo, para poder enviar libras a la zona de Franco sin &mdash;en la expresi&oacute;n que queda en los expedientes&mdash; perder la cara. En marzo de 1937, una reuni&oacute;n de la Oficina de Comercio, el Tesoro, el Banco de Inglaterra, la embajada brit&aacute;nica en Valencia y la Oficina de Compensaci&oacute;n decidi&oacute; abiertamente dar largas al negociador espa&ntilde;ol.</p>
+
+  <p class="en">It was not a general European pattern. The Republic signed payments agreements with Czechoslovakia on 15 January 1937 and with France the day after. And the decision not to release the London fund is attributed by the study <em>especially</em> to the Bank of England&rsquo;s own interventions and proposals, in the person of its officer <strong>Cobbold</strong> &mdash; the reason being that putting sterling at the legitimate government&rsquo;s disposal would mean confronting the Nationalist side. The British departments agreed it was better, politically and economically, to wait for the war to end. They did. <span class="verdict v-doc">documented</span></p>
+  <p class="es">No era un patr&oacute;n europeo general. La Rep&uacute;blica firm&oacute; acuerdos de pagos con Checoslovaquia el 15 de enero de 1937 y con Francia al d&iacute;a siguiente. Y la decisi&oacute;n de no liberar el fondo de Londres la atribuye el estudio <em>especialmente</em> a las intervenciones y propuestas del propio Banco de Inglaterra, en la persona de su directivo <strong>Cobbold</strong>, y la raz&oacute;n era que poner libras a disposici&oacute;n del Gobierno leg&iacute;timo supondr&iacute;a enfrentarse al bando franquista. Los departamentos brit&aacute;nicos coincidieron en que lo mejor, pol&iacute;tica y econ&oacute;micamente, era esperar al final de la guerra. As&iacute; lo hicieron. <span class="verdict v-doc">documentado</span></p>
+
+  <div class="caveat">
+    <p class="en" style="margin-top:0"><strong>Why this reaches past one banker: the Bank of England and the &ldquo;Moscow gold&rdquo;.</strong> This is contested ground inside the Banco de Espa&ntilde;a&rsquo;s own series, which is worth saying plainly. Pablo Mart&iacute;n Ace&ntilde;a has questioned whether the Bank of England was in fact unfavourable to the Republic, and argued that its gold could have gone to other centres offering equal security and better service &mdash; which would make the choice of Moscow purely political.</p>
+    <p class="es" style="margin-top:0"><strong>Por qu&eacute; esto va m&aacute;s all&aacute; de un banquero: el Banco de Inglaterra y el &laquo;oro de Mosc&uacute;&raquo;.</strong> Conviene decir con claridad que este es terreno discutido dentro de la propia serie del Banco de Espa&ntilde;a. Pablo Mart&iacute;n Ace&ntilde;a ha puesto en duda que el Banco de Inglaterra mantuviera una actitud desfavorable hacia la Rep&uacute;blica, y ha sostenido que su oro pudo ir a otras plazas con iguales garant&iacute;as y mejores servicios, lo que har&iacute;a de la elecci&oacute;n de Mosc&uacute; una decisi&oacute;n puramente pol&iacute;tica.</p>
+    <p class="en" style="margin-bottom:0">Mart&iacute;nez Ruiz answers the same way twice, once in each context: the Bank of England&rsquo;s conduct over the clearing account allows that reading to be doubted, at least as far as Britain is concerned. Some 475 tonnes of fine gold went to the Soviet Union and raised about US$470 million. The same London that would not release &pound;1.75 m owed to the Bank of Spain is part of the reason the gold went east.</p>
+    <p class="es" style="margin-bottom:0">Mart&iacute;nez Ruiz responde lo mismo dos veces, una en cada contexto: la actitud del Banco de Inglaterra en la cuenta de compensaci&oacute;n permite dudar de esa interpretaci&oacute;n, al menos en lo que a Gran Breta&ntilde;a se refiere. Unas 475 toneladas de oro fino fueron a la Uni&oacute;n Sovi&eacute;tica y produjeron unos 470 millones de d&oacute;lares. El mismo Londres que no liber&oacute; 1,75 millones de libras debidos al Banco de Espa&ntilde;a es parte de la raz&oacute;n por la que el oro march&oacute; al este.</p>
+  </div>
+
+  <p class="en">Which is the distinction that matters in this whole story. It is not between a private bank and a central bank, but between <strong>the transaction and the permission</strong>. Kleinwort&rsquo;s supplied the account, the officer and the credit. The Bank of England and the British government supplied the conditions in which a City house could do that for one side of a foreign war without difficulty &mdash; and made the same thing hard for the other.</p>
+  <p class="es">Y esa es la distinci&oacute;n que importa en toda esta historia. No es entre un banco privado y un banco central, sino entre <strong>la operaci&oacute;n y el permiso</strong>. Kleinwort puso la cuenta, el apoderado y el cr&eacute;dito. El Banco de Inglaterra y el Gobierno brit&aacute;nico pusieron las condiciones para que una casa de la City pudiera hacer eso por un bando de una guerra ajena sin dificultad, y para que al otro le resultara difícil.</p>
 </section>
 
 
